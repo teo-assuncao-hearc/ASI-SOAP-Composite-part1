@@ -5,7 +5,7 @@
       <element id="javaee-facet-resources" facet="ASI-SOAP-Composite-part1/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="ASI-SOAP-Composite-part1" />
+          <element id="module-output" name="SNotaires-REST-Latinos" />
         </element>
       </element>
     </root>
