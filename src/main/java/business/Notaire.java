@@ -1,5 +1,8 @@
 package business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Notaire {
 
     private String titre;
@@ -16,6 +19,9 @@ public class Notaire {
         this.adresse = adresse;
         this.residenceNotariale = residenceNotariale;
         this.email = email;
+    }
+
+    public Notaire() {
     }
 
     // Getters and Setters
@@ -65,6 +71,18 @@ public class Notaire {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Notaire> rechercherNotaire(List<Notaire> notaires, String recherche) {
+        List<Notaire> resultats = new ArrayList<>();
+        for (Notaire notaire : notaires) {
+            if (notaire.getNom().contains(recherche) || notaire.getPrenom().contains(recherche) ||
+                    notaire.getAdresse().contains(recherche) || notaire.getResidenceNotariale().contains(recherche) ||
+                    notaire.getEmail().contains(recherche)) {
+                resultats.add(notaire);
+            }
+        }
+        return resultats;
     }
 
 }
