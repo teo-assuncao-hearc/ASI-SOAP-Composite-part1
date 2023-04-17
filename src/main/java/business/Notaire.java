@@ -11,14 +11,19 @@ public class Notaire {
     private String adresse;
     private String residenceNotariale;
     private String email;
+    private String nomUtilisateur;
+    private String motDePasse;
 
-    public Notaire(String titre, String nom, String prenom, String adresse, String residenceNotariale, String email) {
+    public Notaire(String titre, String nom, String prenom, String adresse, String residenceNotariale, String email, String nomUtilisateur, String motDePasse) {
         this.titre = titre;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.residenceNotariale = residenceNotariale;
         this.email = email;
+        this.nomUtilisateur = nomUtilisateur;
+        this.motDePasse = motDePasse;
+
     }
 
     public Notaire() {
@@ -71,6 +76,22 @@ public class Notaire {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getNomUtilisateur() {
+        return nomUtilisateur;
+    }
+
+    public void setNomUtilisateur(String nomUtilisateur) {
+        this.nomUtilisateur = nomUtilisateur;
+    }
+
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
     }
 
     public List<Notaire> rechercherNotaire(List<Notaire> notaires, String recherche) {
