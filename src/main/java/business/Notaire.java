@@ -106,4 +106,14 @@ public class Notaire {
         return resultats;
     }
 
+    public Notaire authentifierNotaire(List<Notaire> notaires, String nomUtilisateur, String motDePasse) {
+        for (Notaire notaire : notaires) {
+            if (notaire.getNomUtilisateur().equalsIgnoreCase(nomUtilisateur) && notaire.getMotDePasse().equalsIgnoreCase(motDePasse)) {
+                return notaire;
+            }
+        }
+        return null; // Les identifiants sont incorrects
+    }
+
+
 }
