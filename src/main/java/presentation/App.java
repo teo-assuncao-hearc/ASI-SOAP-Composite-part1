@@ -1,4 +1,4 @@
-package org.app;
+package presentation;
 
 import webservice.PublicationWebService;
 
